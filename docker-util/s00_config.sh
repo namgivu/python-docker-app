@@ -19,16 +19,19 @@
 
 
 ##region app specific config
+  #docker hub login
+  DOCKER_HUB_USER='namgivu'
+  DOCKER_HUB_PASS='YOUR_PASS loaded via s00_config.local.sh'
+
   #docker image name/tag for the app
   IMAGE_TAG='friendlyhello'
+  VERSION_TAG='1.0'
+  IMAGE_TAG_REMOTE="$DOCKER_HUB_USER/$IMAGE_TAG:$VERSION_TAG"
 
   #running port setup
   RUN_PORT=5000
   IMAGE_PORT=80 #TODO extract this port from Dockerfile
 
-  #docker hub login
-  DOCKER_HUB_USER='namgivu'
-  DOCKER_HUB_PASS='YOUR_PASS loaded via s00_config.local.sh'
 ##endregion app specific config
 
 #load local config
