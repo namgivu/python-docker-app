@@ -10,3 +10,7 @@ APP_HOME=$s
 
 #docker image name/tag for the app
 IMAGE_TAG='friendlyhello'
+
+#running port setup
+RUN_PORT=5000
+IMAGE_PORT=80 #TODO extract this port from Dockerfile
