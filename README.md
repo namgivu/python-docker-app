@@ -1,0 +1,1 @@
+This application is guided by https://docs.docker.com/get-started/part2
