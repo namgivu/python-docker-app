@@ -32,6 +32,10 @@
   RUN_PORT=5000
   IMAGE_PORT=80 #TODO extract this port from Dockerfile
 
+  #deploy replica
+  DEPLOY_NAME='getstartedlab'
+
+
 ##endregion app specific config
 
 #load local config
