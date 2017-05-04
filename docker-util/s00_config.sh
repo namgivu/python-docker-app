@@ -20,7 +20,7 @@
 
 ##region app specific config
   #docker hub login
-  DOCKER_HUB_USER='namgivu'
+  DOCKER_HUB_USER='YOUR_USER loaded via s00_config.local.sh'
   DOCKER_HUB_PASS='YOUR_PASS loaded via s00_config.local.sh'
 
   #docker image name/tag for the app
