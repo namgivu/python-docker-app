@@ -30,12 +30,11 @@
   IMAGE_NAME_REMOTE="$DOCKER_HUB_USER/$IMAGE_NAME:$VERSION_TAG"
 
   #running port setup
-  RUN_PORT=5000
-  IMAGE_PORT=80 #TODO extract this port from Dockerfile
+  R_PORT=5000 #Run-on-host Port
+  E_PORT=80   #Image's exposed Port #TODO extract this port from Dockerfile
 
   #deploy replica
   DEPLOY_NAME='getstartedlab'
-
 
 ##endregion app specific config
 
