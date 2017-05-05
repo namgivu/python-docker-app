@@ -11,4 +11,5 @@ source "$SCRIPT_HOME/s00_config.sh"
 DETACH_MODE=$1 #e.g. pass detach param as -d
 
 #build image from app at $APP_HOME
-docker run $DETACH_MODE -p $R_PORT:$E_PORT $IMAGE_NAME_LOCAL
+DOCKER_IMAGE=$IMAGE_NAME_LOCAL
+"$SCRIPT_HOME/container-run.sh" $DOCKER_IMAGE $DETACH_MODE
