@@ -8,6 +8,8 @@ source "$SCRIPT_HOME/s00_config.sh"
 
 
 #list running docker-image i.e. docker-container
+echo
+
 echo -e "${CM}All containers${EC}"
 docker ps
 
