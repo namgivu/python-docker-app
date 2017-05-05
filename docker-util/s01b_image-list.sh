@@ -14,4 +14,4 @@ docker image ls
 echo
 
 echo -e "${CM}This app's image${EC}"
-docker image ls | grep -e "^$IMAGE_NAME[ ]\+$VERSION_TAG"
+docker image ls | grep -e "^$IMAGE_NAME[ ]\+$VERSION_TAG" #grep with regex ref. https://askubuntu.com/a/407055/22308
