@@ -47,7 +47,12 @@
 
   #endregion running port setup
 
-  #deploy replica
+  #deploy docker image as a stack
   IMAGE_STACK_NAME='getstartedlab'
+
+  #deploy docker image with swarm/cluster
+  VM01='myvm1'
+  VM02='myvm2'
+  SWARM_MANAGER=$VM01
 
 ##endregion app specific config
