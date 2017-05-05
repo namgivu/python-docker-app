@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+#applied for Ubuntu 16 only
+
 #remove previous version if any
 sudo apt-get remove docker docker-engine
 
