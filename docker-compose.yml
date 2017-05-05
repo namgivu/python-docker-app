@@ -15,14 +15,11 @@ services:
       restart_policy:
         condition: on-failure
 
-    #map a port on the run-host to the container’s exposed-port
-    ports:
+    ports: #map a port on the run-host to the container’s exposed-port
       - "5000:80" #MUST matched with value defined by $R_PORT:$E_PORT @ s00_config.sh
 
-    #instruct web’s containers to share port 80 via a load-balanced network called `webnet`
-    networks:
+    networks: #instruct web’s containers to share port 80 via a load-balanced network called `webnet`
       - webnet
 
-#define the `webnet` network with the default settings (which is a load-balanced overlay network)
-networks:
+networks: #define the `webnet` network with the default settings (which is a load-balanced overlay network)
   webnet:
