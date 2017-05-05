@@ -47,6 +47,6 @@
   #endregion running port setup
 
   #deploy replica
-  DEPLOY_NAME='getstartedlab'
+  IMAGE_STACK='getstartedlab'
 
 ##endregion app specific config

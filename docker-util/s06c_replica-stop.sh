@@ -8,4 +8,4 @@ source "$SCRIPT_HOME/s00_config.sh"
 
 
 #stop the replica mode
-docker stack rm $DEPLOY_NAME
+docker stack rm $IMAGE_STACK
