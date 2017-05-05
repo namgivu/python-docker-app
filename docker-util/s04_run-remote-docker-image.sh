@@ -6,6 +6,7 @@ s=${BASH_SOURCE} ; s=$(dirname "$s") ; s=$(cd "$s" && pwd) ; SCRIPT_HOME=$s
 #load util config
 source "$SCRIPT_HOME/s00_config.sh"
 
+
 #load input
 DETACH_MODE=$1 #e.g. pass detach param as -d
 
