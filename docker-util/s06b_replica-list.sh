@@ -8,4 +8,4 @@ source "$SCRIPT_HOME/s00_config.sh"
 
 
 #view running replicas
-docker stack ps $IMAGE_STACK
+docker stack ps $IMAGE_STACK_NAME
