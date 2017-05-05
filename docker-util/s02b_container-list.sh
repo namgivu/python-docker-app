@@ -13,4 +13,4 @@ docker ps
 echo
 
 echo -e "${CM}The app container${EC}"
-docker ps | grep $IMAGE_TAG
+docker ps | grep $IMAGE_NAME

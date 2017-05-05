@@ -14,13 +14,13 @@ source "$SCRIPT_HOME/s00_config.sh"
   echo
 
   echo -e "${CM}Name/tag the remote image${EC}"
-  sh="docker tag $IMAGE_TAG $IMAGE_TAG_REMOTE"
+  sh="docker tag $IMAGE_NAME $IMAGE_NAME_REMOTE"
   echo $sh ; eval $sh
 
   echo
 
   echo -e "${CM}Push image to remote${EC}"
-  sh="docker push $IMAGE_TAG_REMOTE"
+  sh="docker push $IMAGE_NAME_REMOTE"
   echo $sh ; eval $sh
 
 #endregion push local docker-image to remote docker cloud
