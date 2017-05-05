@@ -1,7 +1,7 @@
 version: "3"
 services:
   web:
-    image: namgivu/friendlyhello:1.0 #TODO How to load this value from s00_config.sh?
+    image: namgivu/friendlyhello:1.0 #MUST matched with value defined by $IMAGE_NAME_REMOTE @ s00_config.sh
 
     deploy:
       #run five instances of the image we uploaded in step 2 as a service called `web`, limiting each one to use, at most, 10% of the CPU (across all cores), and 50MB of RAM.
@@ -15,9 +15,9 @@ services:
       restart_policy:
         condition: on-failure
 
-    #map port 80 on the host to container’s port 80
+    #map a port on the run-host to the container’s exposed-port
     ports:
-      - "5000:80" #TODO How to load this value from s00_config.sh?
+      - "5000:80" #MUST matched with value defined by $R_PORT:$E_PORT @ s00_config.sh
 
     #instruct web’s containers to share port 80 via a load-balanced network called `webnet`
     networks:

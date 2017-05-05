@@ -9,6 +9,7 @@
   s="$SCRIPT_HOME/.." ; s=$(cd "$s" && pwd) ;
   APP_HOME=$s
   DOCKER_FILE="$APP_HOME/Dockerfile"
+  DOCKER_COMPOSE="$APP_HOME/docker-compose.yml"
 
   #coloring
   HL='\033[1;33m' #high-lighted color
