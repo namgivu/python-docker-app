@@ -24,6 +24,9 @@
   DOCKER_HUB_USER='YOUR_USER loaded via s00_config.local.sh'
   DOCKER_HUB_PASS='YOUR_PASS loaded via s00_config.local.sh'
 
+  #load local config
+  source "$SCRIPT_HOME/s00_config.local.sh"
+
   #docker image name/tag for the app
   IMAGE_NAME='friendlyhello'
   VERSION_TAG='1.0'
@@ -47,6 +50,3 @@
   DEPLOY_NAME='getstartedlab'
 
 ##endregion app specific config
-
-#load local config
-source "$SCRIPT_HOME/s00_config.local.sh"
