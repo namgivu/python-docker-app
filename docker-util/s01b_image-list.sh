@@ -8,6 +8,8 @@ source "$SCRIPT_HOME/s00_config.sh"
 
 
 #list current docker local images
+echo
+
 echo -e "${CM}All images${EC}"
 docker image ls
 
