@@ -2,5 +2,5 @@
 
 echo "
 Please use
-stop-container.sh
+container-stop.sh
 "
