@@ -24,9 +24,10 @@
   DOCKER_HUB_PASS='YOUR_PASS loaded via s00_config.local.sh'
 
   #docker image name/tag for the app
-  IMAGE_TAG='friendlyhello'
+  IMAGE_NAME='friendlyhello'
   VERSION_TAG='1.0'
-  IMAGE_TAG_REMOTE="$DOCKER_HUB_USER/$IMAGE_TAG:$VERSION_TAG"
+  IMAGE_NAME_LOCAL="$IMAGE_NAME:$VERSION_TAG"
+  IMAGE_NAME_REMOTE="$DOCKER_HUB_USER/$IMAGE_NAME:$VERSION_TAG"
 
   #running port setup
   RUN_PORT=5000
