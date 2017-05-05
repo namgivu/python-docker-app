@@ -8,6 +8,7 @@
   #app home
   s="$SCRIPT_HOME/.." ; s=$(cd "$s" && pwd) ;
   APP_HOME=$s
+  DOCKER_FILE="$APP_HOME/Dockerfile"
 
   #coloring
   HL='\033[1;33m' #high-lighted color
@@ -29,9 +30,18 @@
   IMAGE_NAME_LOCAL="$IMAGE_NAME:$VERSION_TAG"
   IMAGE_NAME_REMOTE="$DOCKER_HUB_USER/$IMAGE_NAME:$VERSION_TAG"
 
-  #running port setup
-  R_PORT=5000 #Run-on-host Port
-  E_PORT=80   #Image's exposed Port #TODO extract this port from Dockerfile
+  #region running port setup
+    #R_PORT i.e. Run-on-host Port
+    #E_PORT i.e. Image's exposed Port
+
+    #extract port defined in $DOCKER_FILE by line "EXPOSE 80"
+    p=`cat $DOCKER_FILE | grep EXPOSE` ; r='' ; E_PORT="${p/EXPOSE /$r}" #replace in string ref. http://stackoverflow.com/a/13210909/248616
+
+    #set port value
+    R_PORT=5000
+    E_PORT=$E_PORT
+
+  #endregion running port setup
 
   #deploy replica
   DEPLOY_NAME='getstartedlab'
