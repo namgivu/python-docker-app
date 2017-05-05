@@ -8,7 +8,7 @@ source "$SCRIPT_HOME/s00_config.sh"
 
 
 #region push local docker-image to remote docker cloud
-  echo -e "${CM}Login hub.docker.com${EC}"
+  echo -e "${CM}#Login hub.docker.com${EC}"
   sh="docker login -u $DOCKER_HUB_USER -p '$DOCKER_HUB_PASS' "
   echo $sh ; eval $sh
 #endregion push local docker-image to remote docker cloud

@@ -16,7 +16,7 @@ source "$SCRIPT_HOME/s00_config.sh"
   echo
 
   #aftermath check
-  echo -e "${CM}All virtualbox machines${EC}"
+  echo -e "${CM}#All virtualbox machines${EC}"
   docker-machine ls #note $VM01's URL and copy the ip:2376 to $VM01_ADDR below
 
 ##endregion create virtual machine

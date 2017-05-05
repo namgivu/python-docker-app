@@ -10,10 +10,10 @@ source "$SCRIPT_HOME/s00_config.sh"
 #list current docker local images
 echo
 
-echo -e "${CM}All images${EC}"
+echo -e "${CM}#All images${EC}"
 docker image ls
 
 echo
 
-echo -e "${CM}This app's image${EC}"
+echo -e "${CM}#This app's image${EC}"
 docker image ls | grep -e "^$IMAGE_NAME[ ]\+$VERSION_TAG" #grep with regex ref. https://askubuntu.com/a/407055/22308
