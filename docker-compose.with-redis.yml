@@ -28,10 +28,13 @@ services:
     volumes:
       - ./data:/data #lets the container access ./data (on the host i.e. host node) as /data (inside the Redis container)
                      #`redis` accesses directory './data' in the host’s file system as '/data' inside the container, which is where Redis stores data
+                     #the full path of ./data on hosting node is /home/docker/data
+                     #while containers come and go, the files stored on ./data on the specified host will persist, enabling continuity
+
     deploy:
       placement:
         constraints: [node.role == manager] #`placement key` ensuring that this service only ever runs on a swarm manager – never a worker
-                                            #`redis` always runs on the manager node, so it’s always using the same filesystem
+                                            #`redis` always runs on the manager node, so it’s always using the same filesystem #TODO Why running only on manager node ensure same filesystem? Didn't we map "./data:/data"?
     networks:
       - webnet
 
