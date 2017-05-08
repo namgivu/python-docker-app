@@ -8,4 +8,4 @@ source "$SCRIPT_HOME/s00_config.sh"
 
 
 #do remove
-docker-machine ssh $VM01 "docker stack rm $IMAGE_STACK_NAME"
+docker-machine ssh $SWARM_MANAGER "docker stack rm $IMAGE_STACK_NAME"
