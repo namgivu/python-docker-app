@@ -33,7 +33,7 @@ docker-machine ssh $VM01 "docker swarm init --advertise-addr $VM01_ADDR"
 #join $VM02 to this swarm
 echo "
 
-Please join $VM02 to this swarm as instructed above
+${CM}Please join $VM02 to this swarm as instructed above${EC}
 The notation should be
 docker-machine ssh $VM02 'docker swarm join \
   --token <token> \
