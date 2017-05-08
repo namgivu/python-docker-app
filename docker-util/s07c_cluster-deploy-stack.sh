@@ -8,6 +8,9 @@ source "$SCRIPT_HOME/s00_config.sh"
 
 
 ##region deploy friendlyhello app on this cluster/swarm
+  #create data folder for redis service
+  docker-machine ssh $VM01 "mkdir -p ./data"
+
   #copy docker-compose.yml
   docker-machine scp "$APP_HOME/docker-compose.yml" $VM01:~
 
