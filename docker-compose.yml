@@ -21,5 +21,20 @@ services:
     networks: #instruct web’s containers to share port 80 via a load-balanced network called `webnet`
       - webnet
 
+  visualizer:
+    image: dockersamples/visualizer:stable
+    ports:
+      - "8080:8080"
+
+    volumes: #`volumes` giving the `visualizer` access to the host’s socket file for Docker #TODO Why need access to this socket file? What is it?
+      - "/var/run/docker.sock:/var/run/docker.sock"
+
+    deploy:
+      placement:
+        constraints: [node.role == manager] #`placement key` ensuring that this service only ever runs on a swarm manager – never a worker #TODO Why need to run on swarm manager only?
+
+    networks:
+      - webnet
+
 networks: #define the `webnet` network with the default settings (which is a load-balanced overlay network)
   webnet:
