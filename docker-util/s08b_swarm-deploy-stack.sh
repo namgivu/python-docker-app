@@ -8,4 +8,4 @@ source "$SCRIPT_HOME/s00_config.sh"
 
 
 #do deploy
-docker stack deploy -c docker-compose.yml $IMAGE_STACK_NAME
+docker stack deploy -c $DOCKER_COMPOSE $IMAGE_STACK_NAME
