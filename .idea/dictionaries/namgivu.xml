@@ -2,6 +2,7 @@
   <dictionary name="namgivu">
     <words>
       <w>addr</w>
+      <w>aosdeploy</w>
       <w>friendlyhello</w>
       <w>getstartedlab</w>
       <w>myvm</w>

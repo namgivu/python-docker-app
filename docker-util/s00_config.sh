@@ -50,9 +50,13 @@
   #deploy docker image as a stack
   IMAGE_STACK_NAME='getstartedlab'
 
-  #deploy docker image with swarm/cluster
+  #deploy docker image with LOCAL swarm/cluster
   VM01='myvm1'
   VM02='myvm2'
   SWARM_MANAGER=$VM01
+
+  #deploy docker image with REMOTE swarm/cluster i.e Docker Cloud's Swarm
+  REMOTE_SWARM_NAME='aosdeploy2017/getstartedlab'
+
 
 ##endregion app specific config
