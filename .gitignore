@@ -94,7 +94,9 @@ ENV/
 
 
 ##region our app's ignore
-util/docker-util/s00_config.local.sh
 util/docker-util/_private_
+util/docker-util/s00_config.local.sh
+
 util/aws-ecs-util/_private_
+util/aws-ecs-util/s00_config.local.sh
 ##endregion our app's ignore

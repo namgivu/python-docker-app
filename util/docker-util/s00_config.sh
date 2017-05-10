@@ -22,8 +22,8 @@
   DOCKER_HUB_USER='YOUR_USER loaded via s00_config.local.sh'
   DOCKER_HUB_PASS='YOUR_PASS loaded via s00_config.local.sh'
 
-  #load local config
-  source "$SCRIPT_HOME/s00_config.local.sh"
+  #import local config if any ref. http://stackoverflow.com/a/10735854/248616
+  source "$SCRIPT_HOME/s00_config.local.sh"  2> /dev/null
 
   #docker image name/tag for the app
   IMAGE_NAME='friendlyhello'
