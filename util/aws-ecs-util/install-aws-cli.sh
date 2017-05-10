@@ -13,7 +13,7 @@
 
 #region build sh command
   #install awsebcli ref. https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install.html
-  shInstall="sudo pip install awscli"
+  shInstall="sudo pip install --upgrade --user awscli"
 
   #export path to end of file .bashrc
   exportPath='export PATH=~/.local/bin:$PATH'
