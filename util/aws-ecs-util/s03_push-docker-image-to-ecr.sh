@@ -12,9 +12,15 @@
 
 
 #tag the image first
-sh="docker tag $LOCAL_IMAGE_NAME $ECR_IMAGE_NAME"
-echo $sh
+shTag="docker tag $LOCAL_IMAGE_NAME $ECR_IMAGE_NAME"
 
 #do pushing now
-sh="docker push $ECR_IMAGE_NAME"
-echo $sh
+shPush="docker push $ECR_IMAGE_NAME"
+
+echo -e "
+$shTag
+$shPush
+"
+
+eval $shTag
+eval $shPush
