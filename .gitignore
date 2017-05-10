@@ -94,6 +94,6 @@ ENV/
 
 
 ##region our app's ignore
-docker-util/s00_config.local.sh
+util/docker-util/s00_config.local.sh
 util/docker-util/_private_
 ##endregion our app's ignore
