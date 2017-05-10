@@ -19,6 +19,7 @@
 
 ##region app-specific entries
 ECR_REPO_NAME='friendlyhello'
-
-LOCAL_IMAGE_NAME='friendlyhello:1.0'
+IMAGE_TAG='1.0'
+LOCAL_IMAGE_NAME="$ECR_REPO_NAME:$IMAGE_TAG"
 ECR_IMAGE_NAME="$AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/$LOCAL_IMAGE_NAME"
+##endregion app-specific entries
