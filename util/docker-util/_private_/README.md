@@ -1,1 +1,1 @@
-Distro version of `s00_config.local.sh` file to be stored here.
+Distro version of `s00_config.local.sh` file to be stored here
