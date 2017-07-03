@@ -45,4 +45,6 @@ docker-machine ssh $VM02 'docker swarm join \
 
 You may also want to run #ref. https://stackoverflow.com/a/44886631/248616
 sudo ifconfig vboxnet0 down && sudo ifconfig vboxnet0 up
+
+You may want to use port 2377 #https://github.com/docker/machine/issues/4064#issuecomment-296376085
 "
