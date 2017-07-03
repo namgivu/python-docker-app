@@ -22,8 +22,8 @@ source "$SCRIPT_HOME/s00_config.sh"
 ##endregion create virtual machine
 
 
-VM01_ADDR='192.168.99.100:2377' #this address value is copied from `docker-machine ls` command
-VM02_ADDR='192.168.99.101:2377' #this address value is copied from `docker-machine ls` command
+VM01_ADDR='192.168.99.100:2376' #this address value is copied from `docker-machine ls` command
+VM02_ADDR='192.168.99.101:2376' #this address value is copied from `docker-machine ls` command
 SWARM_MANAGER_ADDR=$VM01_ADDR
 
 #create swarm manager @ $VM01
@@ -31,7 +31,7 @@ docker-machine ssh $VM01 "docker swarm init --advertise-addr $VM01_ADDR"
 
 
 #join $VM02 to this swarm
-echo "
+echo -e "
 
 ${CM}Please join $VM02 to this swarm as instructed above${EC}
 The notation should be
@@ -42,4 +42,7 @@ e.g.
 docker-machine ssh $VM02 'docker swarm join \
   --token <token> \
   $SWARM_MANAGER_ADDR'
+
+You may also want to run #ref. https://stackoverflow.com/a/44886631/248616
+sudo ifconfig vboxnet0 down && sudo ifconfig vboxnet0 up
 "

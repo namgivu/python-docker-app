@@ -9,4 +9,4 @@ source "$SCRIPT_HOME/s00_config.sh"
 
 #run replica mode
 docker swarm init #enable swarm mode and make your current machine a swarm manager
-docker stack deploy -c "$APP_HOME/docker-compose.yml" $IMAGE_STACK_NAME
+docker stack deploy -c $DOCKER_COMPOSE $IMAGE_STACK_NAME

@@ -12,9 +12,9 @@ source "$SCRIPT_HOME/s00_config.sh"
   docker-machine ssh $VM01 "mkdir -p ./data"
 
   #copy docker-compose.yml
-  docker-machine scp "$APP_HOME/docker-compose.yml" $VM01:~
+  docker-machine scp $DOCKER_COMPOSE $VM01:~
 
   #do deploy
-  docker-machine ssh $VM01 "docker stack deploy -c docker-compose.yml $IMAGE_STACK_NAME"
+  docker-machine ssh $VM01 "docker stack deploy -c $DOCKER_COMPOSE $IMAGE_STACK_NAME"
 
 ##endregion deploy friendlyhello app on this cluster/swarm
