@@ -1,10 +1,10 @@
 #Use an official Python runtime as a base image
 FROM python:2.7-slim
 
-#Set the working directory to /app
+#Set the working directory to /app #TODO working path on host machine or on container?
 WORKDIR /app
 
-#Copy the current directory contents into the container at /app
+#Copy the current directory contents into the container at /app #TODO absolute path is /app or what?
 ADD . /app
 
 #Install any needed packages specified in requirements.txt
