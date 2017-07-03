@@ -99,4 +99,6 @@ util/docker-util/s00_config.local.sh
 
 util/aws-ecs-util/_private_
 util/aws-ecs-util/s00_config.local.sh
+
+data/dump.rdb
 ##endregion our app's ignore
