@@ -1,7 +1,7 @@
 version: "3"
 services:
   web:
-    image: namgivu/friendlyhello:1.0 #MUST matched with value defined by $IMAGE_NAME_REMOTE @ s00_config.sh
+    image: aosdeploy/friendlyhello:1.0 #MUST matched with value defined by $IMAGE_NAME_REMOTE @ s00_config.sh
 
     deploy:
       #run five instances of the image we uploaded in step 2 as a service called `web`, limiting each one to use, at most, 10% of the CPU (across all cores), and 50MB of RAM.

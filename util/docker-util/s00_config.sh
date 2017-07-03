@@ -33,7 +33,7 @@
 
   #region running port setup
     #R_PORT i.e. Run-on-host Port
-    #E_PORT i.e. Image's exposed Port
+    #E_PORT i.e. Image's Exposed Port
 
     #extract port defined in $DOCKER_FILE by line "EXPOSE 80"
     p=`cat $DOCKER_FILE | grep EXPOSE` ; r='' ; E_PORT="${p/EXPOSE /$r}" #replace in string ref. http://stackoverflow.com/a/13210909/248616

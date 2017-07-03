@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
 echo "
-Please use
+Please use below command with the appropriate container id
 container-stop.sh
 "
